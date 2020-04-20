@@ -311,7 +311,10 @@ def mainloop():
             data["overlays_idx"] = (overlays_idx + 1) % len(overlays)
             data["last_frame_overlay"] = time.time()
 
-    if config.get("debug_show_mask", False):
+    if config.get("debug_show_mask", None) is not None:
+        mask_id = config.get("debug_show_mask")
+        if mask_id >-1 and mask_id < 24:
+            mask = part_segmentation[:,:,mask_id]
         frame[:,:] = mask * 255
 
     frame = frame.astype(np.uint8)
