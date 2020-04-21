@@ -282,8 +282,6 @@ def mainloop():
             -min(0, halo_top):halo.shape[0] + min(0, frame.shape[0] - halo_bottom),
             -min(0, halo_left):halo.shape[1] + min(0, frame.shape[1] - halo_right)
         ]
-        print(halo_right)
-        print(halo.shape)
         halo_top = max(0, mask_top - halo.shape[0])
         halo_bottom = halo_top + halo.shape[0]
         halo_left = max(0, halo_left)
