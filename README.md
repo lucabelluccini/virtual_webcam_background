@@ -1,3 +1,11 @@
+# Experimental Branch
+
+Experimental branch. You can test it, but do not base your code on it.
+
+This branch puts a lot of code in the main program, that will be moved to a filter.
+
+This branch will be rebased into a reasonable patch later instead of being merged.
+
 # Virtual Webcam Background
 
 Virtual Webcam Background allows you to use a virtual background or to blur the background of your webcam image similar to commercial programs like Zoom.
