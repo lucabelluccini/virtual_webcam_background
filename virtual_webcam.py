@@ -263,7 +263,7 @@ def mainloop():
         height, width, "overlays", data)
 
     face_mask = np.bitwise_or(part_segmentation[:,:,0], part_segmentation[:,:,1])
-    if (face_mask > 0).any():
+    if config.get("halo", False) and (face_mask > 0).any():
         center_of_mass = np.array(ndimage.center_of_mass(face_mask))
 
         # Attribution: http://cliparts.co/angel-halo-pictures
